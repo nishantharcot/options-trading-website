@@ -1,9 +1,9 @@
 import express from 'express';
-import { createUser, addMoney } from '../controllers/userController.js';
+import { addMoney, mintTokens } from '../controllers/userController.js';
 
 const router = express.Router();
 
-router.post('/create/:userId', createUser);
 router.post('/onramp/inr', addMoney);
+router.post('/trade/mint', mintTokens);
 
 export default router;
